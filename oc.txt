@@ -3,8 +3,15 @@ oc help
 #login to the cluster
 oc login
 
-# Creating a project
-oc new-project my-project
+#####  Creating a project ##########
+oc new-project <my-project> --description="<desc>" --display-name="<display_name>"
+oc projects
+oc get projects
+oc project <project_name>
+
+oc delete project <project_name>
+
+
 
 #view status of current project
 oc status
@@ -20,3 +27,7 @@ oc logs cakephp-ex-1-deplou
 
 # list supported APIs
 oc api-resources
+
+oc xxxx --help
+
+========================
