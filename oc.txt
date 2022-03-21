@@ -1,3 +1,5 @@
+oc help
+
 #login to the cluster
 oc login
 
