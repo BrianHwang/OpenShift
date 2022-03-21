@@ -1,0 +1,20 @@
+#login to the cluster
+oc login
+
+# Creating a project
+oc new-project my-project
+
+#view status of current project
+oc status
+
+# Create a new App
+oc new-app https:////
+
+# View pods
+oc get pods -o wide
+
+# view and logs
+oc logs cakephp-ex-1-deplou
+
+# list supported APIs
+oc api-resources
