@@ -5,9 +5,11 @@ crc version
 
 
 crc oc-env
-eval $(...)
+eval $(crc oc-env)
 
 crc console --credentials
+
+oc login .......
 
 # to check the openshift cluster operators
 oc get nodes
