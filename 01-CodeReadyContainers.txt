@@ -1,0 +1,19 @@
+crc setup
+crc start
+crc delete
+crc version
+
+
+crc oc-env
+eval $(...)
+
+crc console --credentials
+
+# to check the openshift cluster operators
+oc get nodes
+oc get co 
+
+# to open web console
+crc console
+
+=====
