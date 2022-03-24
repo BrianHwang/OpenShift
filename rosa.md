@@ -36,16 +36,20 @@ rosa create account-roles --mode auto –yes
 
 ```
 #rosa create cluster --cluster-name=rosa-poc --interactive –sts
+
 rosa create cluster --cluster-name rosa-poc --sts --mode auto --yes
+
 rosa logs install -c rosa-poc --watch
+
 rosa list clusters
 rosa describe cluster --cluster=rosa-poc
 ``` 
 
 ```
-rosa create admin -c rosa-poc
- 
+rosa create admin -c rosa-poc 
 ```
+
+## WAIT few Mins
 
 # verify with oc login commend from response
 ```
