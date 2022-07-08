@@ -36,3 +36,18 @@ podman push image-registry.openshift-image-registry.svc:5000/openshift/image
 configs.imageregistry.operator.openshift.io
 
 oc patch configs.imageregistry.operator.openshift.io/cluster --type merge -p '{"spec":{"defaultRoute":true}}'
+
+
+```
+FROM ubuntu:20.04
+
+RUN apt-get update && apt-get install -y --no-install-recommends curl jq git sed wget
+
+RUN wget --no-check-certificate https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/stable/openshift-client-linux.tar.gz \
+    && tar xvzf openshift-client-linux.tar.gz \
+    && mv kubectl /usr/local/bin \
+    && mv oc /usr/local/bin
+
+USER root
+ENTRYPOINT ["bash"]
+```
